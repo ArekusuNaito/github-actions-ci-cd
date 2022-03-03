@@ -14,7 +14,6 @@ jobs:
     steps:
     #Checks-out your repo under $GITHUB_WORKSPACE
     #this way, the job can access it
-    - name: Checking it out 😎
     - uses: actions/checkout@v2
     
     #Run a simple single command
