@@ -12,7 +12,7 @@ jobs:
     name: Step 1
     runs-on: ubuntu-latest
     concurrency:
-      group: foo
+      group: ${{ github.ref }}
       cancel-in-progress: true
     # The Sequence of steps
     steps:
@@ -29,7 +29,7 @@ jobs:
     name: Step 2
     runs-on: ubuntu-latest
     concurrency:
-      group: foo
+      group: ${{ github.ref }}
       cancel-in-progress: true
     steps:
     - name: Run Hello
@@ -41,4 +41,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Run Step 3
-      run: echo Step 3!
+      run: echo Step 3! - Github ref is ${{ github.ref }}
