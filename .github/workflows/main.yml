@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: foo
-      cancel-in-progress: false
+      cancel-in-progress: true
     steps:
     - name: Run Hello
       run: echo Hello, Cosmos!
@@ -41,4 +41,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Run Step 3
-      run: echo Step 3! - Github ref is ${{ github.action }}
+      run: echo ${{github.job.name}} - Github workflow is ${{ github.workflow }}
