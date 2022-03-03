@@ -20,10 +20,10 @@ jobs:
     #Run a simple single command
     - name: Run a simple echo!
       run: echo Nebula, Pulsar, Quasar, Assemble!
-    - name: Gather Cosmics!
-      run: |
-        echo Pulsar Online!
-        echo Quasar Online!
-        echo Nebula Online!
-    - name: Execution End
-      run: echo Gather Cosmic Power!
+    # - name: Gather Cosmics!
+    #   run: |
+    #     echo Pulsar Online!
+    #     echo Quasar Online!
+    #     echo Nebula Online!
+    # - name: Execution End
+    #   run: echo Gather Cosmic Power!
