@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: foo
-      cancel-in-progress: true
+      cancel-in-progress: false
     # The Sequence of steps
     steps:
     #Checks-out your repo under $GITHUB_WORKSPACE
@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: foo
-      cancel-in-progress: true
+      cancel-in-progress: false
     steps:
     - name: Run Hello
       run: echo Hello, Cosmos!
