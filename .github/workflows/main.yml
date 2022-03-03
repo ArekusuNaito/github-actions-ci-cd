@@ -9,6 +9,7 @@ on:
 # They can also be in parallel
 jobs:
   build:
+    name: Job name goes here?
     runs-on: ubuntu-latest
     # The Sequence of steps
     steps:
