@@ -28,4 +28,4 @@ jobs:
         echo Nebula Online!
       
     - name: Execution End
-      run: echo Gather Cosmic Power!
+      run: echo ${{secrets.HIMITSU}}
