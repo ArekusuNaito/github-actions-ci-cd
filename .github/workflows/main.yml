@@ -8,8 +8,8 @@ on:
 # Workflows are made of 1 or Many Jobs
 # They can also be in parallel
 jobs:
-  build:
-    name: Job name goes here?
+  job1:
+    name: Step 1
     runs-on: ubuntu-latest
     # The Sequence of steps
     steps:
@@ -20,12 +20,13 @@ jobs:
     # Run a simple single command
     - name: Run a simple echo!
       run: echo Nebula, Pulsar, Quasar, Assemble!
-    # Separate command
-    - name: Gather Cosmics!
-      run: |
-        echo Pulsar Online!
-        echo Quasar Online!
-        echo Nebula Online!
-      
-    - name: Execution End
-      run: echo ${{secrets.HIMITSU}}
+  job2:
+    name: Step 2
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run Hello
+      run: echo Hello, Cosmos!
+    - name: Sleepy time
+      run: sleep 5
+
+
