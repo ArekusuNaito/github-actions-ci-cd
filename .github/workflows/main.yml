@@ -1,5 +1,5 @@
 # Basic workflow to get started with Github Actions
-name: Simple Command Line Execution
+name: foobar
 #Controls when the workflow will run
 on:
   push:
@@ -11,6 +11,9 @@ jobs:
   job1:
     name: Step 1
     runs-on: ubuntu-latest
+    concurrency:
+      group: foo
+      cancel-in-progress: true
     # The Sequence of steps
     steps:
     #Checks-out your repo under $GITHUB_WORKSPACE
@@ -20,13 +23,22 @@ jobs:
     # Run a simple single command
     - name: Run a simple echo!
       run: echo Nebula, Pulsar, Quasar, Assemble!
+    - name: Now Kill the Universe!
+      run: exit 1;
   job2:
     name: Step 2
     runs-on: ubuntu-latest
+    concurrency:
+      group: foo
+      cancel-in-progress: true
     steps:
     - name: Run Hello
       run: echo Hello, Cosmos!
     - name: Sleepy time
       run: sleep 20
-
-
+  job3:
+    name: Step 3 (not on group, hopefully)
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run Step 3
+      run: echo Step 3!
