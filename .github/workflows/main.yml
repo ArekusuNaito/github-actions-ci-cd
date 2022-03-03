@@ -27,6 +27,6 @@ jobs:
     - name: Run Hello
       run: echo Hello, Cosmos!
     - name: Sleepy time
-      run: sleep 5
+      run: sleep 20
 
 
