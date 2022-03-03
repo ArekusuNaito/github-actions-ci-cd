@@ -1,0 +1,29 @@
+# Basic workflow to get started with Github Actions
+name: CI Naito
+#Controls when the workflow will run
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+# Workflows are made of 1 or Many Jobs
+# They can also be in parallel
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # The Sequence of steps
+    steps:
+    #Checks-out your repo under $GITHUB_WORKSPACE
+    #this way, the job can access it
+    - name: Checking it out 😎
+    - uses: actions/checkout@v2
+    
+    #Run a simple single command
+    - name: Run a simple echo!
+      run: echo Nebula, Pulsar, Quasar, Assemble!
+    - name: Gather Cosmics!
+      run: |
+        echo Pulsar Online!
+        echo Quasar Online!
+        echo Nebula Online!
+    - name: Execution End
+      run: echo Gather Cosmic Power!
