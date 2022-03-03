@@ -37,7 +37,7 @@ jobs:
     - name: Sleepy time
       run: sleep 20
   job3:
-    name: Step 3 (not on group, hopefully)
+    name: Step 3
     runs-on: ubuntu-latest
     steps:
     - name: Run Step 3
